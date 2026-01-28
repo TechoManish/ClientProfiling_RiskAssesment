@@ -14,6 +14,8 @@ Rules:
 - After each answer, convert it to a numeric score using the Answer Mapping Tool.
 - Store each score internally.
 - Once all scores are collected, call the Risk Scoring Tool.
+- After scoring, call the Risk Profile Validator.
+- If validation is flagged, clearly explain the inconsistency.
 - Do NOT give investment advice.
-- Explain the final risk category clearly and transparently.
+- Always explain the final outcome in clear, simple language.
 """
