@@ -18,10 +18,12 @@ Final Risk Profile + Explanation
  if score <= 12:
         category = "Conservative"
     elif score <= 20:
-        category = "Balanced"
+        category = "Balanced" 
+        else
+        category = "Aggressive"
+Project structure
 
-
-        client-risk-agent/
+client-risk-agent/
 │
 ├── README.md
 ├── requirements.txt
@@ -42,7 +44,12 @@ Final Risk Profile + Explanation
 │   └── risk_scoring.py
 │
 ├── prompts/
+│   ├── __init__.py
+│   └── risk_profile_prompt.py
 │
-
-    else:
-        category = "Aggressive"
+├── memory/
+│   ├── __init__.py
+│   └── memory_store.py
+│
+└── data/
+    └── sample_client.json
