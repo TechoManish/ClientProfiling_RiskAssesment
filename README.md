@@ -13,3 +13,11 @@ Tools
  ↓
 Final Risk Profile + Explanation
 
+#AgentType.ZERO_SHOT_REACT_DESCRIPTION
+
+ if score <= 12:
+        category = "Conservative"
+    elif score <= 20:
+        category = "Balanced"
+    else:
+        category = "Aggressive"
