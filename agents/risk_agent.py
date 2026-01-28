@@ -3,11 +3,12 @@ from langchain_openai import ChatOpenAI
 from langchain.memory import ConversationBufferMemory
 
 from tools.risk_scoring import risk_scoring_tool
+from tools.answer_mapper import answer_mapper_tool
 from prompts.risk_profile_prompt import SYSTEM_PROMPT
 
 def run_risk_agent():
     llm = ChatOpenAI(
-        temperature=0.3,
+        temperature=0.2,
         model="gpt-4o-mini"
     )
 
@@ -16,7 +17,10 @@ def run_risk_agent():
         return_messages=True
     )
 
-    tools = [risk_scoring_tool]
+    tools = [
+        answer_mapper_tool,
+        risk_scoring_tool
+    ]
 
     agent = initialize_agent(
         tools=tools,
@@ -27,10 +31,12 @@ def run_risk_agent():
         system_message=SYSTEM_PROMPT
     )
 
+    print("Type 'exit' to quit.\n")
+
     while True:
-        user_input = input("\nClient: ")
+        user_input = input("Client: ")
         if user_input.lower() in ["exit", "quit"]:
             break
 
         response = agent.run(user_input)
-        print(f"\nAgent: {response}")
+        print(f"\nAgent: {response}\n")
