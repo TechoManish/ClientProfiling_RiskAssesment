@@ -59,3 +59,27 @@ client-risk-agent/
  pip install -r requirements.txt
  python main.py
 
+
+
+Make a note that :
+the app separates reasoning from decision logic.
+The LLM understands language, but the final scoring is deterministic and auditable
+
+Further
+Since we are relying on self-validation step, this undermines autonomy, reasoning, and responsibility which are all very banking-aligned principles.
+This is just a sanity check on client's responses
+After the agent calculates the risk profile, it will:
+
+Review the inputs
+
+Review the final risk category
+
+Ask itself:
+
+“Does this classification logically align with the client’s responses?”
+
+Either:
+
+✅ Confirm the result
+
+⚠️ Flag an inconsistency and explain it
