@@ -53,3 +53,9 @@ client-risk-agent/
 │
 └── data/
     └── sample_client.json
+
+
+ HOW TO RUN
+ pip install -r requirements.txt
+ python main.py
+
