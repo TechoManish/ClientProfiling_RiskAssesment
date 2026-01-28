@@ -19,7 +19,8 @@ def run_risk_agent():
 
     tools = [
         answer_mapper_tool,
-        risk_scoring_tool
+        risk_scoring_tool,
+        self_validation_tool
     ]
 
     agent = initialize_agent(
