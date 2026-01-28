@@ -19,5 +19,30 @@ Final Risk Profile + Explanation
         category = "Conservative"
     elif score <= 20:
         category = "Balanced"
+
+
+        client-risk-agent/
+│
+├── README.md
+├── requirements.txt
+├── .env
+│
+├── main.py
+│
+├── config/
+│   ├── __init__.py
+│   └── settings.py
+│
+├── agents/
+│   ├── __init__.py
+│   └── risk_agent.py
+│
+├── tools/
+│   ├── __init__.py
+│   └── risk_scoring.py
+│
+├── prompts/
+│
+
     else:
         category = "Aggressive"
