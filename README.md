@@ -82,4 +82,7 @@ Either:
 
 ✅ Confirm the result
 
+For example, Although your total score suggests an Aggressive profile, if your tool find a low tolerance for losses :it marks as a conflict.
+This case then gets flagged for advisor review
+
 ⚠️ Flag an inconsistency and explain it
